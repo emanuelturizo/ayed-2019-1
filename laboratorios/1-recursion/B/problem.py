@@ -2,8 +2,22 @@ import json
 
 
 # TODO Complete!
-def arrange(numbers):
-    return numbers
+def numpareimpar(lista,k,listapar,listaimpar):
+    
+    
+    if len(lista)==0:
+        return listapar+listaimpar
+    else:
+        if k%2!=0:
+            listaimpar.append(k)
+            return numpareimpar(lista[1:],k,listapar,listaimpar)
+            
+        if k%2==0:
+            listapar.append(k)
+            return numpareimpar(lista[1:],k,listapar,listaimpar)
+        
+    
+    return listapar+listaimpar
 
 
 if __name__ == '__main__':
